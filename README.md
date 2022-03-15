@@ -34,3 +34,7 @@ jobs:
         FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
         TARGET: default
 ```
+
+## Contribution
+
+I am no longer actively maintaining this code, however, if bugs or issues arise, please make a pull request. Please try to maintain backwards compatibility where possible. 
