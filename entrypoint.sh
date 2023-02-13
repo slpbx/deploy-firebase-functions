@@ -10,6 +10,11 @@ if [ -z "${TARGET}" ]; then
     TARGET = "default"
 fi
 
+if [ -z "${CONFIG}" ]; then
+    echo "CONFIG is missing"
+    CONFIG = "./firebase.json"
+fi
+
 if [ -z "${WORKING_DIRECTORY}" ]; then
     echo "WORKING_DIRECTORY is missing"
 else
@@ -23,4 +28,4 @@ fi
 
 firebase use ${TARGET}
 
-firebase deploy --token ${FIREBASE_TOKEN} --only ${DEPLOY_ONLY}
+firebase deploy --token ${FIREBASE_TOKEN} --config ${CONFIG} --only ${DEPLOY_ONLY}
